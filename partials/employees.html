@@ -1,0 +1,34 @@
+﻿<div>
+    <div>
+        <button class="btn btn-default pull-right margin" ng-click="open('lg')">Add Person</button>
+        <!--<button class="btn btn-default pull-right margin" ng-click="addperson()">Add Default</button>
+        <button class="btn btn-default pull-right margin" ng-click="getcount()">Get Count</button>
+        <button class="btn btn-default pull-right margin" ng-click="getall()">Get All</button>-->
+    </div>
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><p class="text-label">Employees</p></th>
+                    <th class="visible-lg"><p class="text-label">Address</p></th>
+                    <th class="visible-lg"><p class="text-label">City</p></th>
+                    <th class="visible-lg"><p class="text-label">State</p></th>
+                    <th class="visible-lg"><p class="text-label">Zip Code</p></th>
+                    <th class="visible-lg"><p class="text-label">Phone Number</p></th>
+                    <th class="visible-lg"><p class="text-label">Occupation</p></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td><a class="text-label" href="#!employees/{{employee.id}}">{{ employee.firstname }} {{ employee.lastname }}</a></td>
+                    <td class="visible-lg">{{ employee.address }}</td>
+                    <td class="visible-lg">{{ employee.city }}</td>
+                    <td class="visible-lg">{{ employee.state }}</td>
+                    <td class="visible-lg">{{ employee.zipcode }}</td>
+                    <td class="visible-lg">{{ employee.phonenumber }}</td>
+                    <td class="visible-lg">{{ employee.workplace }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

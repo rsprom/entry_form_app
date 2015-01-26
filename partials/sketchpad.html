@@ -1,0 +1,21 @@
+﻿<div class="container">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10 text-center">
+        <div>
+            <canvas sketch-pad id="sketch-pad" class="sketchpad margin" height="300"></canvas>
+        </div>
+        <div class="btn-group margin">
+            <!--<button class="btn btn-default" ng-click="copyImage()">Copy Image</button>-->
+            <button class="btn btn-default" ng-click="displayData()">Display DataURL</button>
+            <!--<button class="btn btn-default" ng-show="imageData.dataExists" ng-click="convertData()">Copy DataURL to BLOB</button>-->
+        </div>
+        <!--<div>
+            <canvas sketch-pad id="copy-of-sketch-pad" class="sketchpad" width="300" height="300"></canvas>
+        </div>-->
+        <div class="margin" style="word-wrap:break-word">
+            <p>{{ imageData.dataSrc }}</p>
+        </div>
+    </div>
+
+    <div class="col-lg-1"></div>
+</div>

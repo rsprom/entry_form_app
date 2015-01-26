@@ -1,0 +1,508 @@
+﻿/* MIXIN IMPORT
+============================================================================= */
+@import "elements.less";
+
+/* VARIABLES
+============================================================================= */
+@primary-color: white;
+@bar-color: rgba(0,0,0,0.7);
+@navbar-link-color: white;
+@secondary-color: @image-two-theme;
+@image-path: @image-two-bg;
+@header-text-color: lighten(white, 5%);
+
+@image-one-theme: #324280;
+@image-one-bg: url("../images/image_crop.jpg");
+
+@image-two-theme: #eea32c;
+@image-two-bg: url("../images/image2.jpg");
+
+/* FOR MOBILE VIEW
+============================================================================= */
+@viewport {
+    zoom: 1.0;
+    width: device-width;
+}
+
+/* FOR TEST.HTML
+============================================================================= */
+.span {
+    content: "TEST";
+}
+
+
+/* GENERAL CSS
+============================================================================= */
+body {
+    background: white;
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    &:link {
+        color: darken(@primary-color, 35%);
+    }
+}
+
+.padding {
+    padding: 15px;
+}
+
+.row {
+    margin: 0;
+}
+
+.margin {
+    margin: 15px;
+}
+
+.app-modal-window {
+    .modal-dialog {
+
+    @media (max-width: 992px) {
+        width: 100%;
+    }
+
+    @media (min-width: 993px) {
+        width: 800px;
+    }
+    }
+}
+
+.entry {
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid #757575;
+
+    &:focus {
+        border-bottom: 2px solid @secondary-color;
+    }
+}
+
+.login-header{
+    color: #000000;
+
+    p {
+        margin: 5px;
+    }
+}
+
+.site-header {
+    height: 300px;
+    background: rgb(0, 0, 0);
+
+    &-image {
+        height: 300px;
+        background-image: @image-path;
+        background-position-y: 40%;
+        opacity: .8;
+    }
+
+}
+
+
+.modal-window {
+    z-index: 9999;
+}
+
+.btn {
+    @media (max-width: 992px) {
+        height: 50px;
+        width: 200px;
+        font-size: 20px;
+    }
+}
+
+.navbar {
+    border-radius: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 500;
+    border: none;
+
+
+    a {
+        &:link {
+            font-weight: 100;
+            color: @navbar-link-color;
+        }
+    }
+
+    li > a {
+        &:link {
+            font-weight: 100;
+            color: @navbar-link-color;
+        }
+    }
+
+    @media (max-width: 992px) {
+        background-color: none;
+        background-image: @image-path;
+        opacity: 1;
+        .custom-font-color(white);
+        .drop-shadow(0, 1px, 2px, 0.2);
+    }
+
+    @media (min-width: 993px) {
+        background-color: @bar-color;
+        opacity: .9;
+        .custom-font-color(@bar-color);
+    }
+}
+
+.navbar-inverse {
+    .navbar-toggle {
+        border-color: white;
+    }
+}
+
+.navbar-collapse {
+    font-size: 20px;
+    border: none;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.jumbotron {
+    .vertical-gradient(@secondary-color, darken(@secondary-color, 15%));
+
+    h1, p {
+        color: @primary-color;
+    }
+
+    @media (max-width: 992px) {
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+    @media (min-width: 993px) {
+        h1 {
+            font-size: 60px;
+        }
+    }
+}
+
+.form-control {
+    &:focus {
+        box-shadow: none;
+    }
+
+    @media (max-width: 992px) {
+        height: 60px;
+        font-size: 20px;
+    }
+
+    @media (min-width: 993px) {
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
+.text-label {
+    @media (max-width: 992px) {
+        font-size: 20px;
+    }
+
+    @media (min-width: 993px) {
+        font-size: 15px;
+    }
+}
+
+/* CANVAS SETTING
+============================================================================= */
+.sketchpad {
+    border: solid;
+    border-color: darkslategray;
+    width: 100%;
+}
+
+.signature-pad {
+    border: solid;
+    border-color: darkslategray;
+    height: 200px;
+    width: 100%;
+}
+
+/* PAGE SETTING FOR ANIMATION
+============================================================================= */
+.site-page {
+    background-color: white;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+
+    a {
+        &:link {
+            color: @secondary-color;
+        }
+
+        &:visited {
+            color: darken(@secondary-color, 35%);
+        }
+
+        &:hover {
+            color: lighten(@secondary-color, 35%);
+        }
+    }
+
+    @media (min-width: 993px) {
+        margin-top: 300px;
+    }
+
+    @media (max-width: 992px) {
+        margin-top: 70px;
+    }
+}
+
+.page {
+    background-color: white;
+    margin-top: 10px;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+
+    ng-leave {
+        z-index: 9000;
+    }
+
+    ng-enter {
+        z-index: 8000;
+    }
+}
+
+/* ANIMATIONS
+============================================================================= */
+
+.page-login {
+    &.ng-leave {
+        -webkit-animation: slideOutLeft 0.5s both ease-in;
+        -moz-animation: slideOutLeft 0.5s both ease-in;
+        animation: slideOutLeft 0.5s both ease-in;
+        z-index: 7000;
+    }
+
+    &.ng-enter {
+        -webkit-animation: slideInLeft 0.5s both ease-in;
+        -moz-animation: slideInLeft 0.5s both ease-in;
+        animation: slideInLeft 0.5s both ease-in;
+        z-index: 7000;
+    }
+}
+
+.page-index {
+    &.ng-leave {
+        -webkit-animation: slideOutLeft 0.5s both ease-in;
+        -moz-animation: slideOutLeft 0.5s both ease-in;
+        animation: slideOutLeft 0.5s both ease-in;
+        z-index: 7000;
+    }
+
+    &.ng-enter {
+        -webkit-animation: slideInLeft 0.5s both ease-in;
+        -moz-animation: slideInLeft 0.5s both ease-in;
+        animation: slideInLeft 0.5s both ease-in;
+        z-index: 7000;
+    }
+}
+
+
+.page-detail {
+    &.ng-leave {
+        -webkit-animation: slideOutRight 0.5s both ease-in;
+        -moz-animation: slideOutRight 0.5s both ease-in;
+        animation: slideOutRight 0.5s both ease-in;
+    }
+
+    &.ng-enter {
+        -webkit-animation: slideInRight 0.5s both ease-in;
+        -moz-animation: slideInRight 0.5s both ease-in;
+        animation: slideInRight 0.5s both ease-in;
+    }
+}
+
+/* MIXINS */
+.vertical-gradient (@startColor, @endColor) {
+    background-color: @startColor;
+    background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+    background: -webkit-linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -ms-linear-gradient(top, @startColor, @endColor);
+    background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+.custom-font-color (@a) when (lightness(@a) >= 50%) {
+    color: darken(@a, 95%);
+}
+
+.custom-font-color (@a) when (lightness(@a) < 50%) {
+    color: lighten(@a, 95%);
+}
+
+.custom-font-color (@a) {
+    background-color: @a;
+}
+
+
+/* ANIMATION VARIABLES
+============================================================================= */
+/* slide in from the right */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes slideInRight {
+    from {
+        -moz-transform: translateX(100%);
+    }
+
+    to {
+        -moz-transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes slideInRight {
+    from {
+        -webkit-transform: translateX(100%);
+    }
+
+    to {
+        -webkit-transform: translateX(0);
+    }
+}
+
+/* slide out to the right */
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@-moz-keyframes slideOutRight {
+    from {
+        -moz-transform: translateX(0);
+    }
+
+    to {
+        -moz-transform: translateX(100%);
+    }
+}
+
+@-webkit-keyframes slideOutRight {
+    from {
+        -webkit-transform: translateX(0);
+    }
+
+    to {
+        -webkit-transform: translateX(100%);
+    }
+}
+
+/* stay */
+@keyframes stay {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes stay {
+    from {
+        -moz-transform: translateX(0);
+    }
+
+    to {
+        -moz-transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes stay {
+    from {
+        -webkit-transform: translateX(0);
+    }
+
+    to {
+        -webkit-transform: translateX(0);
+    }
+}
+
+/* slide in from the left */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes slideInLeft {
+    from {
+        -moz-transform: translateX(-100%);
+    }
+
+    to {
+        -moz-transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes slideInLeft {
+    from {
+        -webkit-transform: translateX(-100%);
+    }
+
+    to {
+        -webkit-transform: translateX(0);
+    }
+}
+
+/* slide out from the left */
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@-moz-keyframes slideOutLeft {
+    from {
+        -moz-transform: translateX(0);
+    }
+
+    to {
+        -moz-transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes slideOutLeft {
+    from {
+        -webkit-transform: translateX(0);
+    }
+
+    to {
+        -webkit-transform: translateX(-100%);
+    }
+}

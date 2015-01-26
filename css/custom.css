@@ -1,0 +1,414 @@
+﻿/* MIXIN IMPORT
+============================================================================= */
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/* VARIABLES
+============================================================================= */
+/* FOR MOBILE VIEW
+============================================================================= */
+@viewport {
+  zoom: 1.0;
+  width: device-width;
+}
+/* FOR TEST.HTML
+============================================================================= */
+.span {
+  content: "TEST";
+}
+/* GENERAL CSS
+============================================================================= */
+body {
+  background: white;
+  font-family: 'Lato', sans-serif;
+}
+a:link {
+  color: #a6a6a6;
+}
+.padding {
+  padding: 15px;
+}
+.row {
+  margin: 0;
+}
+.margin {
+  margin: 15px;
+}
+
+@media (max-width: 992px) {
+  .app-modal-window .modal-dialog {
+    width: 100%;
+  }
+  
+  .modal-dialog {
+  padding: 10px;
+  margin: 0px;
+}
+}
+@media (min-width: 993px) {
+  .app-modal-window .modal-dialog {
+    width: 800px;
+  }
+}
+.entry {
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid #757575;
+}
+.entry:focus {
+  border-bottom: 2px solid #eea32c;
+}
+.login-header {
+  color: #000000;
+}
+.login-header p {
+  margin: 5px;
+}
+.site-header {
+  height: 300px;
+  background: #000000;
+}
+.site-header-image {
+  height: 300px;
+  background-image: url("../images/image2.jpg");
+  background-position-y: 40%;
+  opacity: .8;
+}
+.modal-window {
+  z-index: 9999;
+}
+@media (max-width: 992px) {
+  .btn {
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+  }
+}
+.navbar {
+  border-radius: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 500;
+  border: none;
+}
+.navbar a:link {
+  font-weight: 100;
+  color: #ffffff;
+}
+.navbar li > a:link {
+  font-weight: 100;
+  color: #ffffff;
+}
+@media (max-width: 992px) {
+  .navbar {
+    background-color: none;
+    background-image: url("../images/image2.jpg");
+    opacity: 1;
+    color: #0d0d0d;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+@media (min-width: 993px) {
+  .navbar {
+    opacity: .9;
+    color: rgba(242, 242, 242, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+.navbar-inverse .navbar-toggle {
+  border-color: white;
+}
+.navbar-collapse {
+  font-size: 20px;
+  border: none;
+}
+.navbar-brand {
+  font-size: 20px;
+  font-weight: 700;
+}
+.jumbotron {
+  background-color: #eea32c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#eea32c), to(#be7b0f));
+  background: -webkit-linear-gradient(top, #eea32c, #be7b0f);
+  background: -moz-linear-gradient(top, #eea32c, #be7b0f);
+  background: -ms-linear-gradient(top, #eea32c, #be7b0f);
+  background: -o-linear-gradient(top, #eea32c, #be7b0f);
+}
+.jumbotron h1,
+.jumbotron p {
+  color: #ffffff;
+}
+@media (max-width: 992px) {
+  .jumbotron h1 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 993px) {
+  .jumbotron h1 {
+    font-size: 60px;
+  }
+}
+.form-control:focus {
+  box-shadow: none;
+}
+@media (max-width: 992px) {
+  .form-control {
+    height: 60px;
+    font-size: 20px;
+  }
+}
+@media (min-width: 993px) {
+  .form-control {
+    height: 35px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) {
+  .text-label {
+    font-size: 20px;
+  }
+}
+@media (min-width: 993px) {
+  .text-label {
+    font-size: 15px;
+  }
+}
+/* CANVAS SETTING
+============================================================================= */
+.sketchpad {
+  border: solid;
+  border-color: darkslategray;
+  width: 100%;
+}
+.signature-pad {
+	border: solid;
+	border-color: darkslategray;
+	height: 200px;
+	width: 100%;
+}
+
+@media (max-width: 992px) {
+.signature-pad {
+		margin-left: 0px;
+}
+
+}
+@media (min-width: 993px) {
+.signature-pad {
+		margin-left: 90px;
+}
+}
+/* PAGE SETTING FOR ANIMATION
+============================================================================= */
+.site-page {
+  background-color: white;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.site-page a:link {
+  color: #eea32c;
+}
+.site-page a:visited {
+  color: #603e08;
+}
+.site-page a:hover {
+  color: #fbebd1;
+}
+@media (min-width: 993px) {
+  .site-page {
+    margin-top: 300px;
+  }
+}
+@media (max-width: 992px) {
+  .site-page {
+    margin-top: 70px;
+  }
+}
+.page {
+  background-color: white;
+  margin-top: 10px;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.page ng-leave {
+  z-index: 9000;
+}
+.page ng-enter {
+  z-index: 8000;
+}
+/* ANIMATIONS
+============================================================================= */
+.page-login.ng-leave {
+  -webkit-animation: slideOutLeft 0.5s both ease-in;
+  -moz-animation: slideOutLeft 0.5s both ease-in;
+  animation: slideOutLeft 0.5s both ease-in;
+  z-index: 7000;
+}
+.page-login.ng-enter {
+  -webkit-animation: slideInLeft 0.5s both ease-in;
+  -moz-animation: slideInLeft 0.5s both ease-in;
+  animation: slideInLeft 0.5s both ease-in;
+  z-index: 7000;
+}
+.page-index.ng-leave {
+  -webkit-animation: slideOutLeft 0.5s both ease-in;
+  -moz-animation: slideOutLeft 0.5s both ease-in;
+  animation: slideOutLeft 0.5s both ease-in;
+  z-index: 7000;
+}
+.page-index.ng-enter {
+  -webkit-animation: slideInLeft 0.5s both ease-in;
+  -moz-animation: slideInLeft 0.5s both ease-in;
+  animation: slideInLeft 0.5s both ease-in;
+  z-index: 7000;
+}
+.page-detail.ng-leave {
+  -webkit-animation: slideOutRight 0.5s both ease-in;
+  -moz-animation: slideOutRight 0.5s both ease-in;
+  animation: slideOutRight 0.5s both ease-in;
+}
+.page-detail.ng-enter {
+  -webkit-animation: slideInRight 0.5s both ease-in;
+  -moz-animation: slideInRight 0.5s both ease-in;
+  animation: slideInRight 0.5s both ease-in;
+}
+/* MIXINS */
+/* ANIMATION VARIABLES
+============================================================================= */
+/* slide in from the right */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes slideInRight {
+  from {
+    -moz-transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+  }
+}
+/* slide out to the right */
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@-moz-keyframes slideOutRight {
+  from {
+    -moz-transform: translateX(0);
+  }
+  to {
+    -moz-transform: translateX(100%);
+  }
+}
+@-webkit-keyframes slideOutRight {
+  from {
+    -webkit-transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(100%);
+  }
+}
+/* stay */
+@keyframes stay {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes stay {
+  from {
+    -moz-transform: translateX(0);
+  }
+  to {
+    -moz-transform: translateX(0);
+  }
+}
+@-webkit-keyframes stay {
+  from {
+    -webkit-transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(0);
+  }
+}
+/* slide in from the left */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes slideInLeft {
+  from {
+    -moz-transform: translateX(-100%);
+  }
+  to {
+    -moz-transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+  }
+}
+/* slide out from the left */
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@-moz-keyframes slideOutLeft {
+  from {
+    -moz-transform: translateX(0);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes slideOutLeft {
+  from {
+    -webkit-transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+/*# sourceMappingURL=custom.css.map */

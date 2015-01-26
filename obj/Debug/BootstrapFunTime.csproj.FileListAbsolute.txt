@@ -1,0 +1,6 @@
+c:\users\ritchiep\documents\visual studio 2013\Projects\BootstrapFunTime\BootstrapFunTime\bin\BootstrapFunTime.dll.config
+c:\users\ritchiep\documents\visual studio 2013\Projects\BootstrapFunTime\BootstrapFunTime\bin\BootstrapFunTime.dll
+c:\users\ritchiep\documents\visual studio 2013\Projects\BootstrapFunTime\BootstrapFunTime\bin\BootstrapFunTime.pdb
+c:\users\ritchiep\documents\visual studio 2013\Projects\BootstrapFunTime\BootstrapFunTime\obj\Debug\BootstrapFunTime.csprojResolveAssemblyReference.cache
+c:\users\ritchiep\documents\visual studio 2013\Projects\BootstrapFunTime\BootstrapFunTime\obj\Debug\BootstrapFunTime.dll
+c:\users\ritchiep\documents\visual studio 2013\Projects\BootstrapFunTime\BootstrapFunTime\obj\Debug\BootstrapFunTime.pdb

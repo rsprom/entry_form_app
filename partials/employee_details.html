@@ -1,0 +1,39 @@
+﻿<div class="container">
+    <h1>{{employee.firstname}} {{employee.lastname}}</h1>
+    <div class="col-md-2"></div>
+    <div class="col-md-9">
+        <dl class="dl-horizontal text-label">
+            <dt>Address</dt>
+            <dd class="text-spacing">{{employee.address}}</dd>
+
+            <dt>Zip Code</dt>
+            <dd class="text-spacing">{{employee.zipcode}}</dd>
+
+            <dt>City</dt>
+            <dd class="text-spacing">{{employee.city}}</dd>
+
+            <dt>State</dt>
+            <dd class="text-spacing">{{employee.state}}</dd>
+
+            <dt>Phone number</dt>
+            <dd class="text-spacing">{{employee.phonenumber}}</dd>
+
+            <dt>Birth date</dt>
+            <dd class="text-spacing">{{employee.birthdate}}</dd>
+
+            <dt>Occupation</dt>
+            <dd class="text-spacing">{{employee.workplace}}</dd>
+
+            <dt>Signature</dt>
+            <img id="signatureImage"/>
+        </dl>
+
+    </div>
+    <div class="col-md-1"></div>
+
+    <div class="pull-right padding">
+        <button type="submit" class="btn btn-default navbar-btn button" ng-click="open()">Edit</button>
+        <button type="submit" class="btn btn-default navbar-btn button" ng-click="goBack()">Go Back</button>
+    </div>
+
+</div>
